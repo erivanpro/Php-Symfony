@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{ parent() }}
+	Page de bienvenue
+{% endblock %}
+
+{% block body %}
+	<h2>Page de Test</h2>
+	
+
+{# <h1>{% trans from 'test' %}Welcome to Symfony{% endtrans %}</h1>
+
+<h2>{{ 'say_hello'|trans({'name': 'Yves'}, 'test') }}</h2>
+<p>{{ 'produits'|trans({'nombre': 0}, 'test') }}</p>
+<p>{{ 'produits'|trans({'nombre': 1}, 'test') }}</p>
+<p>{{ 'produits'|trans({'nombre': 2}, 'test') }}</p> #}
+       test date:
+       	{{1585827000 | date('d-m-Y H:i:s')}}
+       	variable de session auteur: {{ app.session.get('auteur') }}
+       
+
+{% endblock %}

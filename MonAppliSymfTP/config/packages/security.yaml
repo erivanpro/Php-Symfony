@@ -1,0 +1,29 @@
+security:
+    # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
+    encoders:
+        Symfony\Component\Security\Core\User\User: plaintext
+        App\Entity\User:
+             algorithm: bcrypt
+             cost: 12
+
+    providers:
+        api_key_user_provider:
+            entity:
+                class: App\Entity\User
+                property: apiToken
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+       
+        main:
+            anonymous: ~
+            provider:
+                api_key_user_provider
+            guard:
+                authenticators:
+                    - App\Security\TokenAuthenticator
+            logout:
+                path: app_logout
+    access_control:
+         - { path: ^/apitest, roles: ROLE_ADMIN }

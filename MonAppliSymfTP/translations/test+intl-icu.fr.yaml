@@ -1,0 +1,9 @@
+Welcome to Symfony: Bienvenue sur Symfony
+say_hello: Bonjour {name}
+produits: >-
+    {nombre, plural,
+        =0    {Aucun produit disponible}
+        one   {Un seul produit est disponible...}
+        other {Il y a  # produits !}
+    }
+ 

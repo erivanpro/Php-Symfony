@@ -1,0 +1,2 @@
+produit.nom.min: Votre nom doit faire au moins {{ limit }} caractères 
+produit.nom.max: Votre nom ne doit pas dépasser {{ limit }} caractères

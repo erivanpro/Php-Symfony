@@ -1,0 +1,3 @@
+index:
+   path: /testroute
+   controller: App\Controller\TestController::index

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			{% block title %}Welcome!
+			{% endblock %}
+		</title>
+		{% block stylesheets %}
+			<link rel="stylesheet" href="{{ asset('css/app.css') }}">
+			<link rel="stylesheet" href="{{ asset('build/app.css') }}">
+			<link rel="stylesheet" href="{{ asset('css/styleCheckbox.css') }}">
+
+		{% endblock %}
+	</head>
+	<body>
+		{% include 'header.html.twig' %}
+		{% block body %}{% endblock %}
+		{% include 'footer.html.twig' %}
+		{% block javascripts %}
+		{{ encore_entry_script_tags('app') }}
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<script src="{{ asset('js/formdist.js') }}"></script>
+		<script>// Add the following code if you want the name of the file appear on select</script>
+							{% endblock %}
+						</body></html>

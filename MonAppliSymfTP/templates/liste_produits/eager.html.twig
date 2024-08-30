@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des produits
+{% endblock %}
+
+{% block body %}
+
+	<div class="d-flex flex-row justify-content-around flex-wrap">
+		{% for produit in listeproduits %}
+			
+							
+							 
+			{{ produit.nom }}
+			{{ produit.reference.numero }}					 
+							
+		{% endfor %}
+	</div>
+{% endblock %}
